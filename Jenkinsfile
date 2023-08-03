@@ -12,19 +12,19 @@ pipeline{
         stage('build-the-app-bycode'){
             steps{
                 echo 'this is the build job'
-                sh 'npm install'
+                sh 'compile'
             }
         }
         stage('test-the-app-bycode'){
             steps{
                 echo 'this is the test job'
-                sh 'npm test'
+                sh 'clean test'
             }
         }
         stage('pacakage-the-app-bycode'){
             steps{
                 echo 'this is the package job'
-                sh 'npm run package'
+                sh 'package'
             }
         }
     }
