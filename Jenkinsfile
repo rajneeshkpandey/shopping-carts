@@ -12,19 +12,19 @@ pipeline{
         stage('build-the-app-bycode'){
             steps{
                 echo 'this is the build job'
-                sh 'compile'
+                mvn 'compile'
             }
         }
         stage('test-the-app-bycode'){
             steps{
                 echo 'this is the test job'
-                sh 'clean test'
+                mvn 'clean test'
             }
         }
         stage('pacakage-the-app-bycode'){
             steps{
                 echo 'this is the package job'
-                sh 'package'
+                mvn 'package'
             }
         }
     }
